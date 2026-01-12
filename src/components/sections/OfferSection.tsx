@@ -1,4 +1,5 @@
 import CTAButton from "@/components/CTAButton";
+import ScrollReveal from "@/components/ScrollReveal";
 import { Check, Lock } from "lucide-react";
 
 const OfferSection = () => {
@@ -14,60 +15,68 @@ const OfferSection = () => {
   return (
     <section className="px-4 py-16 md:py-24 bg-card">
       <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-2xl md:text-4xl font-bold mb-8">
-          O Investimento Que Se Paga com 1 Consulta
-        </h2>
+        <ScrollReveal>
+          <h2 className="text-2xl md:text-4xl font-bold mb-8">
+            O Investimento Que Se Paga com 1 Consulta
+          </h2>
+        </ScrollReveal>
 
-        <div className="mb-8">
-          <p className="text-muted-foreground mb-4">Esse material poderia custar <span className="line-through">R$ 297</span>.</p>
-          <p className="text-lg text-muted-foreground mb-4">
-            Afinal, são <span className="font-bold text-foreground">18 mil conversas reais</span> analisadas e <span className="font-bold text-foreground">37 clínicas</span> testadas.
-          </p>
-          <p className="text-muted-foreground mb-2">Mas o preço não é esse.</p>
-          <p className="text-muted-foreground mb-2">Porque eu quero que toda clínica use.</p>
-          <p className="text-muted-foreground">Pequena, grande, começando agora.</p>
-        </div>
-
-        <div className="mb-8">
-          <p className="text-muted-foreground mb-2">Por isso:</p>
-          <p className="text-4xl font-bold text-muted-foreground line-through mb-2">R$ 197</p>
-        </div>
-
-        <div className="bg-gradient-to-br from-primary/20 to-primary/5 border-2 border-primary rounded-2xl p-8 md:p-12 mb-8">
-          <p className="text-6xl md:text-7xl font-bold text-primary mb-4">R$ 57</p>
-          <p className="text-xl text-muted-foreground mb-2">Menos que uma consulta.</p>
-          <p className="text-2xl font-bold text-accent mb-4">R$ 1,90 por dia durante 30 dias.</p>
-          
-          <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground mb-8">
-            <span>Pagamento único.</span>
-            <span>•</span>
-            <span>Acesso imediato.</span>
-            <span>•</span>
-            <span>Seus para sempre.</span>
+        <ScrollReveal delay={0.1}>
+          <div className="mb-8">
+            <p className="text-muted-foreground mb-4">Esse material poderia custar <span className="line-through">R$ 297</span>.</p>
+            <p className="text-lg text-muted-foreground mb-4">
+              Afinal, são <span className="font-bold text-foreground">18 mil conversas reais</span> analisadas e <span className="font-bold text-foreground">37 clínicas</span> testadas.
+            </p>
+            <p className="text-muted-foreground mb-2">Mas o preço não é esse.</p>
+            <p className="text-muted-foreground mb-2">Porque eu quero que toda clínica use.</p>
+            <p className="text-muted-foreground">Pequena, grande, começando agora.</p>
           </div>
+        </ScrollReveal>
 
-          <div className="flex items-center justify-center gap-2 text-primary font-bold text-lg mb-6">
-            <Lock className="w-5 h-5" />
-            <span>ACESSO IMEDIATO E SEGURO</span>
+        <ScrollReveal delay={0.15}>
+          <div className="mb-8">
+            <p className="text-muted-foreground mb-2">Por isso:</p>
+            <p className="text-4xl font-bold text-muted-foreground line-through mb-2">R$ 197</p>
           </div>
+        </ScrollReveal>
 
-          <CTAButton size="xl" className="mb-8">
-            → QUERO OS SCRIPTS POR R$ 57
-          </CTAButton>
+        <ScrollReveal delay={0.2}>
+          <div className="bg-gradient-to-br from-primary/20 to-primary/5 border-2 border-primary rounded-2xl p-8 md:p-12 mb-8">
+            <p className="text-6xl md:text-7xl font-bold text-primary mb-4">R$ 57</p>
+            <p className="text-xl text-muted-foreground mb-2">Menos que uma consulta.</p>
+            <p className="text-2xl font-bold text-accent mb-4">R$ 1,90 por dia durante 30 dias.</p>
+            
+            <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground mb-8">
+              <span>Pagamento único.</span>
+              <span>•</span>
+              <span>Acesso imediato.</span>
+              <span>•</span>
+              <span>Seus para sempre.</span>
+            </div>
 
-          <ul className="text-left max-w-md mx-auto space-y-3">
-            {included.map((item, index) => (
-              <li key={index} className="flex items-center gap-3">
-                <Check className="w-5 h-5 text-primary flex-shrink-0" />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
+            <div className="flex items-center justify-center gap-2 text-primary font-bold text-lg mb-6">
+              <Lock className="w-5 h-5" />
+              <span>ACESSO IMEDIATO E SEGURO</span>
+            </div>
 
-          <p className="text-sm text-muted-foreground mt-6">
-            Compra 100% segura • Acesso em 2 minutos
-          </p>
-        </div>
+            <CTAButton size="xl" className="mb-8">
+              → QUERO OS SCRIPTS POR R$ 57
+            </CTAButton>
+
+            <ul className="text-left max-w-md mx-auto space-y-3">
+              {included.map((item, index) => (
+                <li key={index} className="flex items-center gap-3">
+                  <Check className="w-5 h-5 text-primary flex-shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            <p className="text-sm text-muted-foreground mt-6">
+              Compra 100% segura • Acesso em 2 minutos
+            </p>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );
