@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const FAQSection = () => {
   const faqs = [
@@ -32,26 +33,30 @@ const FAQSection = () => {
   return (
     <section className="px-4 py-16 md:py-24 bg-card">
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-2xl md:text-4xl font-bold text-center mb-12">
-          Perguntas Rápidas
-        </h2>
+        <ScrollReveal>
+          <h2 className="text-2xl md:text-4xl font-bold text-center mb-12">
+            Perguntas Rápidas
+          </h2>
+        </ScrollReveal>
 
-        <Accordion type="single" collapsible className="space-y-4">
-          {faqs.map((faq, index) => (
-            <AccordionItem
-              key={index}
-              value={`item-${index}`}
-              className="bg-secondary border border-border rounded-lg px-6"
-            >
-              <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
-                {faq.question}
-              </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground text-base">
-                {faq.answer}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <ScrollReveal delay={0.15}>
+          <Accordion type="single" collapsible className="space-y-4">
+            {faqs.map((faq, index) => (
+              <AccordionItem
+                key={index}
+                value={`item-${index}`}
+                className="bg-secondary border border-border rounded-lg px-6"
+              >
+                <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground text-base">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </ScrollReveal>
       </div>
     </section>
   );

@@ -1,4 +1,5 @@
 import { Check } from "lucide-react";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const WhatYouGetSection = () => {
   const situations = [
@@ -56,44 +57,49 @@ const WhatYouGetSection = () => {
   return (
     <section className="px-4 py-16 md:py-24 bg-card">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl md:text-4xl font-bold text-center mb-4">
-          O Que Você Recebe
-        </h2>
-        <p className="text-center text-accent text-lg mb-12">
-          (Tudo em PDF, Acesso Imediato)
-        </p>
+        <ScrollReveal>
+          <h2 className="text-2xl md:text-4xl font-bold text-center mb-4">
+            O Que Você Recebe
+          </h2>
+          <p className="text-center text-accent text-lg mb-12">
+            (Tudo em PDF, Acesso Imediato)
+          </p>
+        </ScrollReveal>
 
-        <div className="bg-secondary/50 rounded-xl p-6 mb-8">
-          <h3 className="text-xl font-bold text-primary mb-4 flex items-center gap-2">
-            <Check className="w-6 h-6" />
-            SCRIPTS DAS 7 SITUAÇÕES CRÍTICAS
-          </h3>
-        </div>
+        <ScrollReveal delay={0.1}>
+          <div className="bg-secondary/50 rounded-xl p-6 mb-8">
+            <h3 className="text-xl font-bold text-primary mb-4 flex items-center gap-2">
+              <Check className="w-6 h-6" />
+              SCRIPTS DAS 7 SITUAÇÕES CRÍTICAS
+            </h3>
+          </div>
+        </ScrollReveal>
 
         <div className="grid md:grid-cols-2 gap-6 mb-12">
           {situations.map((situation, index) => (
-            <div
-              key={index}
-              className="bg-secondary rounded-lg p-6 border border-border hover:border-primary/50 transition-colors"
-            >
-              <h4 className="text-lg font-bold text-primary mb-4">{situation.title}</h4>
-              <ul className="space-y-2">
-                {situation.bullets.map((bullet, bulletIndex) => (
-                  <li key={bulletIndex} className="flex items-start gap-2 text-muted-foreground">
-                    <span className="text-primary mt-1">•</span>
-                    <span>{bullet}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <ScrollReveal key={index} delay={0.1 + index * 0.05}>
+              <div className="bg-secondary rounded-lg p-6 border border-border hover:border-primary/50 transition-colors h-full">
+                <h4 className="text-lg font-bold text-primary mb-4">{situation.title}</h4>
+                <ul className="space-y-2">
+                  {situation.bullets.map((bullet, bulletIndex) => (
+                    <li key={bulletIndex} className="flex items-start gap-2 text-muted-foreground">
+                      <span className="text-primary mt-1">•</span>
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </ScrollReveal>
           ))}
         </div>
 
-        <div className="space-y-4 text-center">
-          <p className="text-xl font-bold text-accent">+ Regras de Ouro do Atendimento</p>
-          <p className="text-xl font-bold text-accent">+ Guia de quando usar cada script</p>
-          <p className="text-xl font-bold text-accent">+ Exemplos reais explicados</p>
-        </div>
+        <ScrollReveal delay={0.4}>
+          <div className="space-y-4 text-center">
+            <p className="text-xl font-bold text-accent">+ Regras de Ouro do Atendimento</p>
+            <p className="text-xl font-bold text-accent">+ Guia de quando usar cada script</p>
+            <p className="text-xl font-bold text-accent">+ Exemplos reais explicados</p>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

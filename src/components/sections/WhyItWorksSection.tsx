@@ -1,4 +1,5 @@
 import { X, Check } from "lucide-react";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const WhyItWorksSection = () => {
   const comparisons = [
@@ -23,28 +24,34 @@ const WhyItWorksSection = () => {
   return (
     <section className="px-4 py-16 md:py-24 bg-card">
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-2xl md:text-4xl font-bold text-center mb-12">
-          Por Que Funciona <span className="text-muted-foreground">(Quando Outros "Treinos" Não Funcionam)</span>
-        </h2>
+        <ScrollReveal>
+          <h2 className="text-2xl md:text-4xl font-bold text-center mb-12">
+            Por Que Funciona <span className="text-muted-foreground">(Quando Outros "Treinos" Não Funcionam)</span>
+          </h2>
+        </ScrollReveal>
 
         <div className="space-y-4">
           {comparisons.map((comparison, index) => (
-            <div key={index} className="grid md:grid-cols-2 gap-4">
-              <div className="flex items-center gap-3 bg-destructive/10 rounded-lg p-4">
-                <X className="w-5 h-5 text-destructive flex-shrink-0" />
-                <span className="text-muted-foreground">{comparison.wrong}</span>
+            <ScrollReveal key={index} delay={0.1 + index * 0.08}>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="flex items-center gap-3 bg-destructive/10 rounded-lg p-4">
+                  <X className="w-5 h-5 text-destructive flex-shrink-0" />
+                  <span className="text-muted-foreground">{comparison.wrong}</span>
+                </div>
+                <div className="flex items-center gap-3 bg-primary/10 rounded-lg p-4">
+                  <Check className="w-5 h-5 text-primary flex-shrink-0" />
+                  <span className="font-medium">{comparison.right}</span>
+                </div>
               </div>
-              <div className="flex items-center gap-3 bg-primary/10 rounded-lg p-4">
-                <Check className="w-5 h-5 text-primary flex-shrink-0" />
-                <span className="font-medium">{comparison.right}</span>
-              </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
 
-        <p className="text-center text-xl font-bold text-accent mt-12">
-          Por isso funciona em 1 hora, não em 1 mês.
-        </p>
+        <ScrollReveal delay={0.5}>
+          <p className="text-center text-xl font-bold text-accent mt-12">
+            Por isso funciona em 1 hora, não em 1 mês.
+          </p>
+        </ScrollReveal>
       </div>
     </section>
   );

@@ -1,4 +1,5 @@
 import { Quote } from "lucide-react";
+import ScrollReveal from "@/components/ScrollReveal";
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -49,40 +50,43 @@ const TestimonialsSection = () => {
   return (
     <section className="px-4 py-16 md:py-24 bg-card">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-2xl md:text-4xl font-bold text-center mb-4">
-          O Que Dizem as Clínicas Que Já Usam
-        </h2>
-        <p className="text-center text-muted-foreground text-lg mb-12">
-          Resultados reais de quem parou de improvisar
-        </p>
+        <ScrollReveal>
+          <h2 className="text-2xl md:text-4xl font-bold text-center mb-4">
+            O Que Dizem as Clínicas Que Já Usam
+          </h2>
+          <p className="text-center text-muted-foreground text-lg mb-12">
+            Resultados reais de quem parou de improvisar
+          </p>
+        </ScrollReveal>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
-            <div
-              key={index}
-              className="bg-secondary border border-border rounded-xl p-6 flex flex-col hover:border-primary/30 transition-colors"
-            >
-              <Quote className="w-8 h-8 text-primary/40 mb-4" />
-              
-              <p className="text-foreground mb-6 flex-grow leading-relaxed">
-                "{testimonial.quote}"
-              </p>
-              
-              <div className="border-t border-border pt-4">
-                <p className="font-bold text-foreground">{testimonial.name}</p>
-                <p className="text-sm text-muted-foreground">{testimonial.clinic}</p>
-                <p className="text-sm text-muted-foreground mb-3">{testimonial.city}</p>
-                <span className="inline-block bg-primary/20 text-primary text-sm font-semibold px-3 py-1 rounded-full">
-                  {testimonial.result}
-                </span>
+            <ScrollReveal key={index} delay={0.1 + index * 0.08}>
+              <div className="bg-secondary border border-border rounded-xl p-6 flex flex-col hover:border-primary/30 transition-colors h-full">
+                <Quote className="w-8 h-8 text-primary/40 mb-4" />
+                
+                <p className="text-foreground mb-6 flex-grow leading-relaxed">
+                  "{testimonial.quote}"
+                </p>
+                
+                <div className="border-t border-border pt-4">
+                  <p className="font-bold text-foreground">{testimonial.name}</p>
+                  <p className="text-sm text-muted-foreground">{testimonial.clinic}</p>
+                  <p className="text-sm text-muted-foreground mb-3">{testimonial.city}</p>
+                  <span className="inline-block bg-primary/20 text-primary text-sm font-semibold px-3 py-1 rounded-full">
+                    {testimonial.result}
+                  </span>
+                </div>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
 
-        <p className="text-center text-muted-foreground mt-12 text-sm">
-          *Resultados baseados em feedback de clínicas reais após implementação dos scripts
-        </p>
+        <ScrollReveal delay={0.6}>
+          <p className="text-center text-muted-foreground mt-12 text-sm">
+            *Resultados baseados em feedback de clínicas reais após implementação dos scripts
+          </p>
+        </ScrollReveal>
       </div>
     </section>
   );
