@@ -11,7 +11,7 @@ const CTAButton = ({ children, className, size = "lg" }: CTAButtonProps) => {
   return (
     <Button
       className={cn(
-        "bg-primary hover:bg-primary/90 text-primary-foreground font-bold uppercase tracking-wide transition-all duration-300 hover:scale-105 shadow-[0_0_30px_hsl(var(--primary)/0.4)]",
+        "bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold uppercase tracking-wide transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl rounded-xl",
         size === "lg" && "px-8 py-6 text-lg",
         size === "xl" && "px-10 py-7 text-xl",
         className

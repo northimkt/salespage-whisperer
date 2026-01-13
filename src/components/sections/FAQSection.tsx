@@ -34,7 +34,7 @@ const FAQSection = () => {
     <section className="px-4 py-16 md:py-24 bg-card">
       <div className="max-w-3xl mx-auto">
         <ScrollReveal>
-          <h2 className="text-2xl md:text-4xl font-bold text-center mb-12">
+          <h2 className="font-heading text-2xl md:text-4xl font-bold text-center mb-12 text-foreground">
             Perguntas Rápidas
           </h2>
         </ScrollReveal>
@@ -45,9 +45,9 @@ const FAQSection = () => {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="bg-secondary border border-border rounded-lg px-6"
+                className="bg-background border border-border rounded-xl px-6"
               >
-                <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline">
+                <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline text-foreground">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground text-base">
