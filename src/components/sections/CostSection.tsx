@@ -2,21 +2,21 @@ import ScrollReveal from "@/components/ScrollReveal";
 
 const CostSection = () => {
   return (
-    <section className="px-4 py-16 md:py-24">
+    <section className="px-4 py-16 md:py-24 bg-background">
       <div className="max-w-3xl mx-auto">
         <ScrollReveal>
-          <h2 className="text-2xl md:text-4xl font-bold text-center mb-12">
+          <h2 className="font-heading text-2xl md:text-4xl font-bold text-center mb-12 text-foreground">
             Quanto Custa <span className="text-destructive">Não Ter Isso?</span>
           </h2>
         </ScrollReveal>
 
         <ScrollReveal delay={0.15}>
-          <div className="bg-destructive/10 border border-destructive/30 rounded-2xl p-8 md:p-10">
-            <p className="text-xl font-semibold mb-6">Conta rápida:</p>
+          <div className="bg-destructive/5 border-2 border-destructive/20 rounded-2xl p-8 md:p-10">
+            <p className="text-xl font-semibold mb-6 text-foreground">Conta rápida:</p>
             
             <div className="space-y-4 mb-8">
-              <p className="text-lg">
-                Se você perde apenas <span className="font-bold">5 pacientes por mês</span> por falha no atendimento...
+              <p className="text-lg text-foreground">
+                Se você perde apenas <span className="font-bold text-primary">5 pacientes por mês</span> por falha no atendimento...
               </p>
               
               <div className="pl-6 space-y-2">
@@ -30,11 +30,11 @@ const CostSection = () => {
               </div>
             </div>
             
-            <div className="border-t border-destructive/30 pt-6">
+            <div className="border-t border-destructive/20 pt-6">
               <p className="text-2xl font-bold text-destructive mb-2">
                 Total: R$ 5.500/mês escorrendo pelo WhatsApp
               </p>
-              <p className="text-3xl md:text-4xl font-bold text-destructive">
+              <p className="font-heading text-3xl md:text-4xl font-extrabold text-destructive">
                 R$ 66.000/ano.
               </p>
               <p className="text-muted-foreground mt-4 italic">

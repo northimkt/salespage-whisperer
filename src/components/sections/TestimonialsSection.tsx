@@ -48,10 +48,10 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="px-4 py-16 md:py-24 bg-card">
+    <section className="px-4 py-16 md:py-24 bg-muted/30">
       <div className="max-w-5xl mx-auto">
         <ScrollReveal>
-          <h2 className="text-2xl md:text-4xl font-bold text-center mb-4">
+          <h2 className="font-heading text-2xl md:text-4xl font-bold text-center mb-4 text-foreground">
             O Que Dizem as Clínicas Que Já Usam
           </h2>
           <p className="text-center text-muted-foreground text-lg mb-12">
@@ -62,7 +62,7 @@ const TestimonialsSection = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
             <ScrollReveal key={index} delay={0.1 + index * 0.08}>
-              <div className="bg-secondary border border-border rounded-xl p-6 flex flex-col hover:border-primary/30 transition-colors h-full">
+              <div className="bg-card border border-border rounded-xl p-6 flex flex-col hover:border-primary/40 transition-colors h-full shadow-sm hover:shadow-md">
                 <Quote className="w-8 h-8 text-primary/40 mb-4" />
                 
                 <p className="text-foreground mb-6 flex-grow leading-relaxed">
@@ -73,7 +73,7 @@ const TestimonialsSection = () => {
                   <p className="font-bold text-foreground">{testimonial.name}</p>
                   <p className="text-sm text-muted-foreground">{testimonial.clinic}</p>
                   <p className="text-sm text-muted-foreground mb-3">{testimonial.city}</p>
-                  <span className="inline-block bg-primary/20 text-primary text-sm font-semibold px-3 py-1 rounded-full">
+                  <span className="inline-block bg-secondary/20 text-secondary text-sm font-semibold px-3 py-1 rounded-full">
                     {testimonial.result}
                   </span>
                 </div>

@@ -55,19 +55,19 @@ const WhatYouGetSection = () => {
   ];
 
   return (
-    <section className="px-4 py-16 md:py-24 bg-card">
+    <section className="px-4 py-16 md:py-24 bg-muted/40">
       <div className="max-w-4xl mx-auto">
         <ScrollReveal>
-          <h2 className="text-2xl md:text-4xl font-bold text-center mb-4">
+          <h2 className="font-heading text-2xl md:text-4xl font-bold text-center mb-4 text-foreground">
             O Que Você Recebe
           </h2>
-          <p className="text-center text-accent text-lg mb-12">
+          <p className="text-center text-primary font-semibold text-lg mb-12">
             (Tudo em PDF, Acesso Imediato)
           </p>
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
-          <div className="bg-secondary/50 rounded-xl p-6 mb-8">
+          <div className="bg-primary/10 border border-primary/20 rounded-xl p-6 mb-8">
             <h3 className="text-xl font-bold text-primary mb-4 flex items-center gap-2">
               <Check className="w-6 h-6" />
               SCRIPTS DAS 7 SITUAÇÕES CRÍTICAS
@@ -78,12 +78,12 @@ const WhatYouGetSection = () => {
         <div className="grid md:grid-cols-2 gap-6 mb-12">
           {situations.map((situation, index) => (
             <ScrollReveal key={index} delay={0.1 + index * 0.05}>
-              <div className="bg-secondary rounded-lg p-6 border border-border hover:border-primary/50 transition-colors h-full">
+              <div className="bg-card rounded-xl p-6 border border-border hover:border-primary/40 transition-colors h-full shadow-sm hover:shadow-md">
                 <h4 className="text-lg font-bold text-primary mb-4">{situation.title}</h4>
                 <ul className="space-y-2">
                   {situation.bullets.map((bullet, bulletIndex) => (
                     <li key={bulletIndex} className="flex items-start gap-2 text-muted-foreground">
-                      <span className="text-primary mt-1">•</span>
+                      <span className="text-secondary mt-1">•</span>
                       <span>{bullet}</span>
                     </li>
                   ))}
@@ -95,9 +95,9 @@ const WhatYouGetSection = () => {
 
         <ScrollReveal delay={0.4}>
           <div className="space-y-4 text-center">
-            <p className="text-xl font-bold text-accent">+ Regras de Ouro do Atendimento</p>
-            <p className="text-xl font-bold text-accent">+ Guia de quando usar cada script</p>
-            <p className="text-xl font-bold text-accent">+ Exemplos reais explicados</p>
+            <p className="text-xl font-bold text-secondary">+ Regras de Ouro do Atendimento</p>
+            <p className="text-xl font-bold text-secondary">+ Guia de quando usar cada script</p>
+            <p className="text-xl font-bold text-secondary">+ Exemplos reais explicados</p>
           </div>
         </ScrollReveal>
       </div>

@@ -13,10 +13,10 @@ const OfferSection = () => {
   ];
 
   return (
-    <section className="px-4 py-16 md:py-24 bg-card">
+    <section className="px-4 py-16 md:py-24 bg-muted/30">
       <div className="max-w-3xl mx-auto text-center">
         <ScrollReveal>
-          <h2 className="text-2xl md:text-4xl font-bold mb-8">
+          <h2 className="font-heading text-2xl md:text-4xl font-bold mb-8 text-foreground">
             O Investimento Que Se Paga com 1 Consulta
           </h2>
         </ScrollReveal>
@@ -25,7 +25,7 @@ const OfferSection = () => {
           <div className="mb-8">
             <p className="text-muted-foreground mb-4">Esse material poderia custar <span className="line-through">R$ 297</span>.</p>
             <p className="text-lg text-muted-foreground mb-4">
-              Afinal, são <span className="font-bold text-foreground">18 mil conversas reais</span> analisadas e <span className="font-bold text-foreground">37 clínicas</span> testadas.
+              Afinal, são <span className="font-bold text-primary">18 mil conversas reais</span> analisadas e <span className="font-bold text-primary">37 clínicas</span> testadas.
             </p>
             <p className="text-muted-foreground mb-2">Mas o preço não é esse.</p>
             <p className="text-muted-foreground mb-2">Porque eu quero que toda clínica use.</p>
@@ -36,15 +36,15 @@ const OfferSection = () => {
         <ScrollReveal delay={0.15}>
           <div className="mb-8">
             <p className="text-muted-foreground mb-2">Por isso:</p>
-            <p className="text-4xl font-bold text-muted-foreground line-through mb-2">R$ 197</p>
+            <p className="text-4xl font-bold text-muted-foreground/60 line-through mb-2">R$ 197</p>
           </div>
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <div className="bg-gradient-to-br from-primary/20 to-primary/5 border-2 border-primary rounded-2xl p-8 md:p-12 mb-8">
-            <p className="text-6xl md:text-7xl font-bold text-primary mb-4">R$ 57</p>
+          <div className="bg-card border-2 border-primary rounded-2xl p-8 md:p-12 mb-8 shadow-xl">
+            <p className="font-heading text-6xl md:text-7xl font-extrabold text-primary mb-4">R$ 57</p>
             <p className="text-xl text-muted-foreground mb-2">Menos que uma consulta.</p>
-            <p className="text-2xl font-bold text-accent mb-4">R$ 1,90 por dia durante 30 dias.</p>
+            <p className="text-2xl font-bold text-secondary mb-4">R$ 1,90 por dia durante 30 dias.</p>
             
             <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground mb-8">
               <span>Pagamento único.</span>
@@ -54,7 +54,7 @@ const OfferSection = () => {
               <span>Seus para sempre.</span>
             </div>
 
-            <div className="flex items-center justify-center gap-2 text-primary font-bold text-lg mb-6">
+            <div className="flex items-center justify-center gap-2 text-secondary font-bold text-lg mb-6">
               <Lock className="w-5 h-5" />
               <span>ACESSO IMEDIATO E SEGURO</span>
             </div>
@@ -65,8 +65,8 @@ const OfferSection = () => {
 
             <ul className="text-left max-w-md mx-auto space-y-3">
               {included.map((item, index) => (
-                <li key={index} className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-primary flex-shrink-0" />
+                <li key={index} className="flex items-center gap-3 text-foreground">
+                  <Check className="w-5 h-5 text-secondary flex-shrink-0" />
                   <span>{item}</span>
                 </li>
               ))}
