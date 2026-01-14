@@ -1,19 +1,9 @@
 import CTAButton from "@/components/CTAButton";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Check, Lock } from "lucide-react";
-
 const OfferSection = () => {
-  const included = [
-    "21 scripts prontos para as 7 situações críticas",
-    "Bônus 1: Sistema Anti-Perda com ChatGPT (acesso imediato)",
-    "Bônus 2: Template Trello CRM (liberado em 7 dias)",
-    "Garantia incondicional de 7 dias",
-    "Acesso vitalício",
-    "Pagamento único",
-  ];
-
-  return (
-    <section className="px-4 py-16 md:py-24 bg-muted/30">
+  const included = ["21 scripts prontos para as 7 situações críticas", "Bônus 1: Sistema Anti-Perda com ChatGPT (acesso imediato)", "Bônus 2: Template Trello CRM (liberado em 7 dias)", "Garantia incondicional de 7 dias", "Acesso vitalício", "Pagamento único"];
+  return <section className="px-4 py-16 md:py-24 bg-muted/30">
       <div className="max-w-3xl mx-auto text-center">
         <ScrollReveal>
           <h2 className="font-heading text-2xl md:text-4xl font-bold mb-8 text-foreground">
@@ -45,9 +35,7 @@ const OfferSection = () => {
             <p className="font-heading text-6xl md:text-7xl font-extrabold text-primary mb-4">R$ 57</p>
             <p className="text-xl text-muted-foreground mb-4">O preço de um almoço.</p>
             
-            <p className="text-lg text-muted-foreground mb-8">
-              Pagamento único. Usa para sempre. Uma vez. Nunca mais paga. Acesso imediato. Seus para sempre.
-            </p>
+            <p className="text-lg text-muted-foreground mb-8">Pagamento único. Usa para sempre.</p>
 
             <div className="flex items-center justify-center gap-2 text-secondary font-bold text-lg mb-6">
               <Lock className="w-5 h-5" />
@@ -59,12 +47,10 @@ const OfferSection = () => {
             </CTAButton>
 
             <ul className="text-left max-w-md mx-auto space-y-3">
-              {included.map((item, index) => (
-                <li key={index} className="flex items-center gap-3 text-foreground">
+              {included.map((item, index) => <li key={index} className="flex items-center gap-3 text-foreground">
                   <Check className="w-5 h-5 text-secondary flex-shrink-0" />
                   <span>{item}</span>
-                </li>
-              ))}
+                </li>)}
             </ul>
 
             <p className="text-sm text-muted-foreground mt-6">
@@ -73,8 +59,6 @@ const OfferSection = () => {
           </div>
         </ScrollReveal>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default OfferSection;
