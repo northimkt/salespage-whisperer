@@ -35,10 +35,16 @@ const CostSection = () => {
                 Total: R$ 5.500/mês escorrendo pelo WhatsApp
               </p>
               <p className="font-heading text-3xl md:text-4xl font-extrabold text-destructive">
-                R$ 66.000/ano.
+                R$ 66.000/ano!
               </p>
               <p className="text-muted-foreground mt-4 italic">
                 E estou sendo muito conservador.
+              </p>
+              <p className="text-xl font-bold text-primary mt-6">
+                Uma única consulta recuperada paga esse material 70 vezes
+              </p>
+              <p className="text-lg text-secondary font-semibold mt-2">
+                Se funcionar UMA vez, você já ganhou. Se funcionar toda semana, você cria uma máquina!
               </p>
             </div>
           </div>

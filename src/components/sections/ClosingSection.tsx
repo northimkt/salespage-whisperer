@@ -38,7 +38,7 @@ const ClosingSection = () => {
         <ScrollReveal delay={0.2}>
           <div className="text-center">
             <CTAButton size="xl" className="mb-6">
-              → SIM, QUERO PARAR DE PERDER PACIENTES - R$ 57
+              QUERO PARAR DE PERDER PACIENTES
             </CTAButton>
             <p className="text-sm text-muted-foreground">
               Acesso imediato • Garantia 7 dias • Pagamento único
