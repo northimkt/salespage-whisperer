@@ -1,9 +1,7 @@
 import CTAButton from "@/components/CTAButton";
 import ScrollReveal from "@/components/ScrollReveal";
-
 const ClosingSection = () => {
-  return (
-    <section className="px-4 py-16 md:py-24 bg-background">
+  return <section className="px-4 py-16 md:py-24 bg-background">
       <div className="max-w-3xl mx-auto">
         <ScrollReveal>
           <h2 className="font-heading text-2xl md:text-4xl font-bold text-center mb-12 text-foreground">
@@ -28,7 +26,7 @@ const ClosingSection = () => {
               <h3 className="font-heading text-2xl font-bold text-secondary mb-6">Opção 2:</h3>
               <div className="space-y-3 text-lg text-foreground">
                 <p className="font-heading text-3xl font-extrabold text-primary">R$ 57.</p>
-                <p>Scripts prontos.</p>
+                <p>Sistema Completo Anti Perda de Pacientes.</p>
                 <p className="text-secondary font-bold">Funcionando em 1 hora.</p>
               </div>
             </div>
@@ -57,8 +55,6 @@ const ClosingSection = () => {
           </div>
         </ScrollReveal>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ClosingSection;
