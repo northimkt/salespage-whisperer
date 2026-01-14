@@ -53,7 +53,7 @@ const ProblemSection = () => {
             <p className="text-lg mb-2 text-foreground">Cada vez de um jeito.</p>
             <p className="text-lg mb-4 text-foreground">Cada dia um desastre diferente.</p>
             <p className="text-xl md:text-2xl font-bold text-destructive">
-              Enquanto isso, R$ 2.000, R$ 5.000, R$ 8.000 vão embora TODO MÊS.
+              Enquanto isso, R$ 2.000, R$ 5.000, R$ 8.000 vão embora TODOS OS MESES.
             </p>
           </div>
         </ScrollReveal>

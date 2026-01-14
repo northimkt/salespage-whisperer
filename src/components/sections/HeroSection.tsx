@@ -7,13 +7,13 @@ const HeroSection = () => {
       <div className="max-w-3xl mx-auto text-center">
         <ScrollReveal>
           <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-foreground">
-            Por <span className="text-primary">R$ 1,90 por Dia</span>, Pare de Perder Pacientes no WhatsApp
+            Pare de Perder Pacientes no <span className="text-primary">WhatsApp.</span>
           </h1>
         </ScrollReveal>
         
         <ScrollReveal delay={0.1}>
           <p className="text-xl md:text-2xl text-muted-foreground mb-12">
-            Scripts prontos que transformam <span className="font-semibold text-secondary">"vou pensar"</span> em consulta agendada
+            Sistema pronto que transforma <span className="font-semibold text-secondary">"vou pensar"</span> em consulta agendada por apenas <span className="font-bold text-primary">R$ 57</span>
           </p>
         </ScrollReveal>
 
@@ -27,13 +27,13 @@ const HeroSection = () => {
             <p className="text-muted-foreground">Aconteceu de novo.</p>
             <p className="text-muted-foreground">E vai acontecer amanhã.</p>
             <p className="text-muted-foreground">E depois de amanhã.</p>
-            <p className="text-primary font-bold mt-4 text-lg">Até você ter esses scripts.</p>
+            <p className="text-primary font-bold mt-4 text-lg">Até você ter esse sistema.</p>
           </div>
         </ScrollReveal>
 
         <ScrollReveal delay={0.3}>
           <CTAButton size="xl">
-            → QUERO OS SCRIPTS POR R$ 57
+            → QUERO O SISTEMA POR R$ 57
           </CTAButton>
         </ScrollReveal>
       </div>

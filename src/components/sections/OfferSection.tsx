@@ -23,7 +23,7 @@ const OfferSection = () => {
 
         <ScrollReveal delay={0.1}>
           <div className="mb-8">
-            <p className="text-muted-foreground mb-4">Esse material poderia custar <span className="line-through">R$ 297</span>.</p>
+            <p className="text-muted-foreground mb-4">Esse material poderia custar <span className="line-through">R$ 197</span>.</p>
             <p className="text-lg text-muted-foreground mb-4">
               Afinal, são <span className="font-bold text-primary">18 mil conversas reais</span> analisadas e <span className="font-bold text-primary">37 clínicas</span> testadas.
             </p>
@@ -43,16 +43,11 @@ const OfferSection = () => {
         <ScrollReveal delay={0.2}>
           <div className="bg-card border-2 border-primary rounded-2xl p-8 md:p-12 mb-8 shadow-xl">
             <p className="font-heading text-6xl md:text-7xl font-extrabold text-primary mb-4">R$ 57</p>
-            <p className="text-xl text-muted-foreground mb-2">Menos que uma consulta.</p>
-            <p className="text-2xl font-bold text-secondary mb-4">R$ 1,90 por dia durante 30 dias.</p>
+            <p className="text-xl text-muted-foreground mb-4">O preço de um almoço.</p>
             
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-muted-foreground mb-8">
-              <span>Pagamento único.</span>
-              <span>•</span>
-              <span>Acesso imediato.</span>
-              <span>•</span>
-              <span>Seus para sempre.</span>
-            </div>
+            <p className="text-lg text-muted-foreground mb-8">
+              Pagamento único. Usa para sempre. Uma vez. Nunca mais paga. Acesso imediato. Seus para sempre.
+            </p>
 
             <div className="flex items-center justify-center gap-2 text-secondary font-bold text-lg mb-6">
               <Lock className="w-5 h-5" />
@@ -60,7 +55,7 @@ const OfferSection = () => {
             </div>
 
             <CTAButton size="xl" className="mb-8">
-              → QUERO OS SCRIPTS POR R$ 57
+              ACESSAR AGORA!
             </CTAButton>
 
             <ul className="text-left max-w-md mx-auto space-y-3">
