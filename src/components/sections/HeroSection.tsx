@@ -12,9 +12,15 @@ const HeroSection = () => {
         </ScrollReveal>
         
         <ScrollReveal delay={0.1}>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-12">
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8">
             Sistema pronto que transforma <span className="font-semibold text-secondary">"vou pensar"</span> em consulta agendada por apenas <span className="font-bold text-primary">R$ 57</span>
           </p>
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.15}>
+          <CTAButton size="xl" className="mb-12">
+            ACESSAR AGORA!
+          </CTAButton>
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
@@ -29,12 +35,6 @@ const HeroSection = () => {
             <p className="text-muted-foreground">E depois de amanhã.</p>
             <p className="text-primary font-bold mt-4 text-lg">Até você ter esse sistema.</p>
           </div>
-        </ScrollReveal>
-
-        <ScrollReveal delay={0.3}>
-          <CTAButton size="xl">
-            → QUERO O SISTEMA POR R$ 57
-          </CTAButton>
         </ScrollReveal>
       </div>
     </section>
