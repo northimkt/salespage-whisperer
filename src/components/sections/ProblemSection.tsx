@@ -32,7 +32,7 @@ const ProblemSection = () => {
       ]
     },
     {
-      contactName: "João - Retorno",
+      contactName: "Ana - Procedimento",
       messages: [
         { text: "Então, conseguiu falar com seu marido?", isPatient: false, time: "09:15" },
         { text: "Visualizado", isPatient: true, time: "09:15" },
