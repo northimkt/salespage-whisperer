@@ -1,5 +1,6 @@
-import { Gift, Check, Bot, Layout } from "lucide-react";
+import { Gift, Check, Layout } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+import robotAiImage from "@/assets/robot-ai.jpg";
 
 const BonusSection = () => {
   return (
@@ -42,16 +43,16 @@ const BonusSection = () => {
                 </div>
               </div>
 
-              {/* Image Placeholder - AI/Robot */}
+              {/* AI/Robot Image */}
               <div className="flex justify-center">
                 <div className="relative">
                   <div className="absolute -inset-4 bg-gradient-to-br from-secondary/20 to-primary/20 rounded-3xl blur-xl" />
-                  <div className="relative bg-muted rounded-2xl p-8 border border-border shadow-lg">
-                    <div className="w-48 h-48 md:w-56 md:h-56 flex flex-col items-center justify-center text-muted-foreground">
-                      <Bot className="w-20 h-20 text-secondary/50 mb-4" />
-                      <p className="text-sm font-medium text-center">Imagem IA/Robô</p>
-                      <p className="text-xs mt-1 text-center">Atendimento inteligente</p>
-                    </div>
+                  <div className="relative rounded-2xl overflow-hidden border border-border shadow-lg">
+                    <img 
+                      src={robotAiImage} 
+                      alt="Robô de atendimento inteligente com IA" 
+                      className="w-48 h-48 md:w-64 md:h-64 object-cover"
+                    />
                   </div>
                 </div>
               </div>
