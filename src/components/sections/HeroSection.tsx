@@ -1,5 +1,6 @@
 import CTAButton from "@/components/CTAButton";
 import ScrollReveal from "@/components/ScrollReveal";
+import heroImage from "@/assets/hero-image.png";
 
 const HeroSection = () => {
   return (
@@ -42,17 +43,12 @@ const HeroSection = () => {
                 {/* Decorative elements */}
                 <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl blur-2xl" />
                 
-                {/* Image placeholder - replace src with actual image */}
-                <div className="relative bg-card border border-border rounded-2xl p-8 shadow-2xl">
-                  <div className="w-64 h-64 md:w-80 md:h-80 bg-muted rounded-xl flex items-center justify-center">
-                    <div className="text-center text-muted-foreground">
-                      <svg className="w-16 h-16 mx-auto mb-4 text-primary/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                      </svg>
-                      <p className="text-sm font-medium">Imagem Hero</p>
-                      <p className="text-xs mt-1">320x320px recomendado</p>
-                    </div>
-                  </div>
+                <div className="relative bg-card border border-border rounded-2xl overflow-hidden shadow-2xl">
+                  <img 
+                    src={heroImage} 
+                    alt="Secretária preocupada olhando o celular" 
+                    className="w-64 h-64 md:w-80 md:h-80 object-cover"
+                  />
                 </div>
               </div>
             </div>
