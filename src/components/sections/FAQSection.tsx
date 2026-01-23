@@ -31,26 +31,26 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="px-4 py-16 md:py-24 bg-card">
+    <section className="px-4 sm:px-6 py-12 md:py-24 bg-card">
       <div className="max-w-3xl mx-auto">
         <ScrollReveal>
-          <h2 className="font-heading text-2xl md:text-4xl font-bold text-center mb-12 text-foreground">
+          <h2 className="font-heading text-xl sm:text-2xl md:text-4xl font-bold text-center mb-8 sm:mb-12 text-foreground">
             Perguntas Rápidas
           </h2>
         </ScrollReveal>
 
         <ScrollReveal delay={0.15}>
-          <Accordion type="single" collapsible className="space-y-4">
+          <Accordion type="single" collapsible className="space-y-3 sm:space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="bg-background border border-border rounded-xl px-6"
+                className="bg-background border border-border rounded-xl px-4 sm:px-6"
               >
-                <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline text-foreground">
+                <AccordionTrigger className="text-left text-base sm:text-lg font-semibold hover:no-underline text-foreground py-4 min-h-[56px]">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground text-base">
+                <AccordionContent className="text-sm sm:text-base text-muted-foreground pb-4">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

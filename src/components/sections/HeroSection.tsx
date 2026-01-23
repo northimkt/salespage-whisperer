@@ -4,7 +4,7 @@ import heroImage from "@/assets/hero-image.png";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-center px-4 py-16 md:py-24 relative overflow-hidden">
+    <section className="min-h-screen flex flex-col justify-center px-4 sm:px-6 py-12 md:py-24 relative overflow-hidden">
       {/* Background with subtle pattern */}
       <div 
         className="absolute inset-0 bg-gradient-to-br from-background via-background to-muted/50"
@@ -14,40 +14,42 @@ const HeroSection = () => {
       />
       
       <div className="max-w-6xl mx-auto w-full relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
           {/* Text Content */}
-          <div className="text-center lg:text-left">
+          <div className="text-center lg:text-left order-2 lg:order-1">
             <ScrollReveal>
-              <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-foreground">
+              <h1 className="font-heading text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 sm:mb-6 text-foreground">
                 Pare de Perder Pacientes no <span className="text-primary">WhatsApp.</span>
               </h1>
             </ScrollReveal>
             
             <ScrollReveal delay={0.1}>
-              <p className="text-xl md:text-2xl text-muted-foreground mb-8">
+              <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
                 Sistema pronto que transforma <span className="font-semibold text-secondary">"vou pensar"</span> em consulta agendada por apenas <span className="font-bold text-primary">R$ 57</span>
               </p>
             </ScrollReveal>
 
             <ScrollReveal delay={0.15}>
-              <CTAButton size="xl" className="mb-8 lg:mb-0">
-                ACESSAR AGORA!
-              </CTAButton>
+              <div className="mb-6 lg:mb-0">
+                <CTAButton size="xl">
+                  ACESSAR AGORA!
+                </CTAButton>
+              </div>
             </ScrollReveal>
           </div>
 
-          {/* Hero Image Placeholder */}
+          {/* Hero Image */}
           <ScrollReveal delay={0.2}>
-            <div className="flex justify-center lg:justify-end">
+            <div className="flex justify-center lg:justify-end order-1 lg:order-2 mb-6 lg:mb-0">
               <div className="relative">
                 {/* Decorative elements */}
-                <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl blur-2xl" />
+                <div className="absolute -inset-3 sm:-inset-4 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-3xl blur-2xl" />
                 
                 <div className="relative bg-card border border-border rounded-2xl overflow-hidden shadow-2xl">
                   <img 
                     src={heroImage} 
                     alt="Secretária preocupada olhando o celular" 
-                    className="w-64 h-64 md:w-80 md:h-80 object-cover"
+                    className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 object-cover"
                   />
                 </div>
               </div>
@@ -57,16 +59,16 @@ const HeroSection = () => {
 
         {/* Card section below */}
         <ScrollReveal delay={0.25}>
-          <div className="bg-card border border-border rounded-xl p-6 md:p-8 mt-12 text-left shadow-lg max-w-3xl mx-auto lg:mx-0">
-            <p className="text-muted-foreground mb-4">Sua secretária acabou de responder:</p>
-            <p className="text-xl md:text-2xl italic text-foreground mb-6">
+          <div className="bg-card border border-border rounded-xl p-5 sm:p-6 md:p-8 mt-8 sm:mt-12 text-left shadow-lg max-w-3xl mx-auto lg:mx-0">
+            <p className="text-muted-foreground mb-3 sm:mb-4 text-sm sm:text-base">Sua secretária acabou de responder:</p>
+            <p className="text-lg sm:text-xl md:text-2xl italic text-foreground mb-4 sm:mb-6">
               "Entendo, qualquer coisa estou à disposição."
             </p>
-            <p className="text-destructive font-semibold text-lg mb-2">Paciente sumiu.</p>
-            <p className="text-muted-foreground">Aconteceu de novo.</p>
-            <p className="text-muted-foreground">E vai acontecer amanhã.</p>
-            <p className="text-muted-foreground">E depois de amanhã.</p>
-            <p className="text-primary font-bold mt-4 text-lg">Até você ter esse sistema.</p>
+            <p className="text-destructive font-semibold text-base sm:text-lg mb-2">Paciente sumiu.</p>
+            <p className="text-muted-foreground text-sm sm:text-base">Aconteceu de novo.</p>
+            <p className="text-muted-foreground text-sm sm:text-base">E vai acontecer amanhã.</p>
+            <p className="text-muted-foreground text-sm sm:text-base">E depois de amanhã.</p>
+            <p className="text-primary font-bold mt-3 sm:mt-4 text-base sm:text-lg">Até você ter esse sistema.</p>
           </div>
         </ScrollReveal>
       </div>

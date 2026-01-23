@@ -48,32 +48,32 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section className="px-4 py-16 md:py-24 bg-muted/30">
+    <section className="px-4 sm:px-6 py-12 md:py-24 bg-muted/30 overflow-hidden">
       <div className="max-w-5xl mx-auto">
         <ScrollReveal>
-          <h2 className="font-heading text-2xl md:text-4xl font-bold text-center mb-4 text-foreground">
+          <h2 className="font-heading text-xl sm:text-2xl md:text-4xl font-bold text-center mb-3 sm:mb-4 text-foreground">
             O Que Dizem as Clínicas Que Já Usam
           </h2>
-          <p className="text-center text-muted-foreground text-lg mb-12">
+          <p className="text-center text-sm sm:text-base text-muted-foreground mb-8 sm:mb-12">
             Resultados reais de quem parou de improvisar
           </p>
         </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {testimonials.map((testimonial, index) => (
             <ScrollReveal key={index} delay={0.1 + index * 0.08}>
-              <div className="bg-card border border-border rounded-xl p-6 flex flex-col hover:border-primary/40 transition-colors h-full shadow-sm hover:shadow-md">
-                <Quote className="w-8 h-8 text-primary/40 mb-4" />
+              <div className="bg-card border border-border rounded-xl p-4 sm:p-6 flex flex-col hover:border-primary/40 transition-colors h-full shadow-sm hover:shadow-md">
+                <Quote className="w-6 h-6 sm:w-8 sm:h-8 text-primary/40 mb-3 sm:mb-4 flex-shrink-0" />
                 
-                <p className="text-foreground mb-6 flex-grow leading-relaxed">
+                <p className="text-sm sm:text-base text-foreground mb-4 sm:mb-6 flex-grow leading-relaxed">
                   "{testimonial.quote}"
                 </p>
                 
-                <div className="border-t border-border pt-4">
-                  <p className="font-bold text-foreground">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.clinic}</p>
-                  <p className="text-sm text-muted-foreground mb-3">{testimonial.city}</p>
-                  <span className="inline-block bg-secondary/20 text-secondary text-sm font-semibold px-3 py-1 rounded-full">
+                <div className="border-t border-border pt-3 sm:pt-4">
+                  <p className="font-bold text-sm sm:text-base text-foreground">{testimonial.name}</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground">{testimonial.clinic}</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground mb-2 sm:mb-3">{testimonial.city}</p>
+                  <span className="inline-block bg-secondary/20 text-secondary text-xs sm:text-sm font-semibold px-2 sm:px-3 py-1 rounded-full">
                     {testimonial.result}
                   </span>
                 </div>
@@ -83,7 +83,7 @@ const TestimonialsSection = () => {
         </div>
 
         <ScrollReveal delay={0.6}>
-          <p className="text-center text-muted-foreground mt-12 text-sm">
+          <p className="text-center text-muted-foreground mt-8 sm:mt-12 text-xs sm:text-sm px-4">
             *Resultados baseados em feedback de clínicas reais após implementação dos scripts
           </p>
         </ScrollReveal>
