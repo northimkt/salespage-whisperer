@@ -13,7 +13,7 @@ import ClosingSection from "@/components/sections/ClosingSection";
 
 const Index = () => {
   return (
-    <main className="min-h-screen bg-background text-foreground">
+    <main className="min-h-screen bg-background text-foreground overflow-x-hidden w-full max-w-full">
       <HeroSection />
       <ProblemSection />
       <SolutionSection />

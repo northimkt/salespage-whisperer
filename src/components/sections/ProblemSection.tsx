@@ -41,37 +41,37 @@ const ProblemSection = () => {
   ];
 
   return (
-    <section className="px-4 py-16 md:py-24 bg-card">
+    <section className="px-4 sm:px-6 py-12 md:py-24 bg-card overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <ScrollReveal>
-          <h2 className="font-heading text-2xl md:text-4xl font-bold text-center mb-8 text-foreground">
+          <h2 className="font-heading text-xl sm:text-2xl md:text-4xl font-bold text-center mb-6 sm:mb-8 text-foreground leading-tight">
             O Problema Que Está Custando Dinheiro na Sua Clínica <span className="text-destructive">AGORA</span>
           </h2>
         </ScrollReveal>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Text content */}
           <div>
             <ScrollReveal delay={0.1}>
-              <div className="space-y-4 mb-8">
-                <p className="text-muted-foreground text-lg">Não é falta de paciente.</p>
-                <p className="text-muted-foreground text-lg">Não é preço alto.</p>
-                <p className="text-muted-foreground text-lg">Não é concorrência.</p>
-                <p className="text-2xl md:text-3xl font-bold text-primary mt-6">É o WhatsApp.</p>
+              <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+                <p className="text-muted-foreground text-base sm:text-lg">Não é falta de paciente.</p>
+                <p className="text-muted-foreground text-base sm:text-lg">Não é preço alto.</p>
+                <p className="text-muted-foreground text-base sm:text-lg">Não é concorrência.</p>
+                <p className="text-xl sm:text-2xl md:text-3xl font-bold text-primary mt-4 sm:mt-6">É o WhatsApp.</p>
               </div>
             </ScrollReveal>
 
             <ScrollReveal delay={0.15}>
-              <p className="text-xl mb-6 text-foreground">
+              <p className="text-lg sm:text-xl mb-4 sm:mb-6 text-foreground">
                 Todo dia, sua clínica perde pacientes em <span className="font-bold text-primary">7 situações que SE REPETEM:</span>
               </p>
             </ScrollReveal>
 
             <ScrollReveal delay={0.2}>
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
                 {problems.map((problem, index) => (
-                  <li key={index} className="flex items-center gap-3 text-lg text-foreground">
-                    <X className="w-5 h-5 text-destructive flex-shrink-0" />
+                  <li key={index} className="flex items-start gap-2 sm:gap-3 text-base sm:text-lg text-foreground">
+                    <X className="w-4 h-4 sm:w-5 sm:h-5 text-destructive flex-shrink-0 mt-0.5" />
                     <span>{problem}</span>
                   </li>
                 ))}
@@ -81,7 +81,7 @@ const ProblemSection = () => {
 
           {/* WhatsApp Mockups */}
           <ScrollReveal delay={0.25}>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-3 sm:gap-4">
               {whatsappConversations.map((conversation, index) => (
                 <WhatsAppMockup
                   key={index}
@@ -94,11 +94,11 @@ const ProblemSection = () => {
         </div>
 
         <ScrollReveal delay={0.3}>
-          <div className="border-l-4 border-destructive pl-6 py-4 bg-destructive/5 rounded-r-xl mt-12 max-w-3xl">
-            <p className="text-lg mb-2 text-foreground">E sua secretária improvisa.</p>
-            <p className="text-lg mb-2 text-foreground">Cada vez de um jeito.</p>
-            <p className="text-lg mb-4 text-foreground">Cada dia um desastre diferente.</p>
-            <p className="text-xl md:text-2xl font-bold text-destructive">
+          <div className="border-l-4 border-destructive pl-4 sm:pl-6 py-3 sm:py-4 bg-destructive/5 rounded-r-xl mt-8 sm:mt-12 max-w-3xl">
+            <p className="text-base sm:text-lg mb-2 text-foreground">E sua secretária improvisa.</p>
+            <p className="text-base sm:text-lg mb-2 text-foreground">Cada vez de um jeito.</p>
+            <p className="text-base sm:text-lg mb-3 sm:mb-4 text-foreground">Cada dia um desastre diferente.</p>
+            <p className="text-lg sm:text-xl md:text-2xl font-bold text-destructive">
               Enquanto isso, R$ 2.000, R$ 5.000, R$ 8.000 vão embora TODOS OS MESES.
             </p>
           </div>
